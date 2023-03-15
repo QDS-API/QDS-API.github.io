@@ -2,7 +2,7 @@
 
 ## Getting Started
 [//]: # "Confirm this is the email address used for webhook api requests"
-In order to use our WebHooks, you need to ensure that you have a valid and actively trading customer account registered with BEX. Once you have your account number, you will need to request a WebHook API key from our <a href="mailto:it@bex.co.za?subject=WebHook%20API%20key%20Request">IT department</a>. We will communicate this to you but it is your responsibility to ensure the secrecy of it.
+In order to use our WebHooks, you need to ensure that you have a valid and actively trading customer account registered with QDS. Once you have your account number, you will need to request a WebHook API key from our <a href="mailto:it@QDS.co.za?subject=WebHook%20API%20key%20Request">IT department</a>. We will communicate this to you but it is your responsibility to ensure the secrecy of it.
 
 Before we get started, please ensure that you understand and have implemented the necessary methods required to work with WebHooks. 
 
@@ -11,7 +11,7 @@ The registration is a two-part process that requires two individual requests.
 
 * First, you need to register your WebHook with us by sending a POST request to our WebHook endpoint located at:
 
-           https://webhook.bex.co.za/api/webhooks/registrations 
+           https://webhook.QDS.co.za/api/webhooks/registrations 
 
 
 > In the header of your request, you should add a new key pair that represents your WebHook API key: 
@@ -35,7 +35,7 @@ The registration is a two-part process that requires two individual requests.
 
 * After you have made this request and you receive a 200 OK response, you need to send another request to:
 
-          https://webhook.bex.co.za/api/ActivateWebHook 
+          https://webhook.QDS.co.za/api/ActivateWebHook 
 
 > Providing the request body with the following values:
 
@@ -69,7 +69,7 @@ More detail on each event type and what payload they contain can be found later 
 ## Unsubscribing
 
 To unsubscribe from our WebHook, send a POST request to:
-          https://webhook.bex.co.za/api/UnsubscribeWebHook
+          https://webhook.QDS.co.za/api/UnsubscribeWebHook
 
 
 > The request body should consist of:

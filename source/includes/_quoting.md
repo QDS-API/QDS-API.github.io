@@ -1,7 +1,7 @@
 # Quoting
 
 ## Overview
-The BEX quoting service allows you to view dynamic shipping pricing across our range of delivery services. By providing us with your shipment addressing information we can return a pricing spread as well as delivery estimations which you can use to make a more informed shipping choice.
+The QDS quoting service allows you to view dynamic shipping pricing across our range of delivery services. By providing us with your shipment addressing information we can return a pricing spread as well as delivery estimations which you can use to make a more informed shipping choice.
 
 It is important to note that quoting on our platform is a “just-in-time” process and we do not store your quotes (nor return a quote number) for later acceptance by yourself. Instead, our implementation is like that of airline bookings where prices quoted are as at “now”. If you choose not to make a booking the prices may change when next you log onto the platform.
 
@@ -37,7 +37,7 @@ Parameter | Type | Description
 dispatchDate | Date | The intended date of shipping.
 totalWeight | Decimal | The total actual weight in kilograms (as placed on a scale) of all of the goods to be shipped
 dimMass | Decimal | The sum of the total cubic centimetres of all of the goods to be shipped. (length x breadth x height) + (length x breadth x height)
-accountNumber | String |Your shipping account number with BEX.
+accountNumber | String |Your shipping account number with QDS.
 originSuburb | String | The suburb from where we will collect your shipment
 originPostCode | String | The postcode of the suburb from where we will collect your shipment.
 destinationSuburb | String | The suburb where we will deliver your shipment
@@ -203,22 +203,22 @@ The objects in the items array are comprised as follows:
 
 Attribute | Type | Description
 --------- | ---- | -----------
-Id | Int | An internal BEX field.
-customerName | String | Your account name with BEX.
+Id | Int | An internal QDS field.
+customerName | String | Your account name with QDS.
 serviced | Int | An internal id used to identify the shipping service in question.
 serviceCodeStr | String | The shipping service code.
 serviceNameStr | String | The full name of the shipping service.
 originSuburb | String | The suburb we calculated from where your shipment will be sent.
 originCity | String | The city from where your shipment will be sent.
 originRateCategory | String | The billing category of the location from where your shipment will be sent. 
-originBranchStr | String | The name of the BEX branch who will handle the collection of your shipment.
-originHub | String | The 3 letter code of the BEX branch that will collect your shipment.
+originBranchStr | String | The name of the QDS branch who will handle the collection of your shipment.
+originHub | String | The 3 letter code of the QDS branch that will collect your shipment.
 originLocationCode | String | The 3 letter town code of the location from where your shipment will be sent.
 destinationSuburb | String | The suburb where your delivery will take place.
 destinationCity | String | The city where your delivery will take place.
 destinationRateCategory | String | The billing category of the location where your shipment will be delivered.
-destinationBranchStr | String | The name of the BEX branch that will handle the delivery of your shipment.
-destinationHub | String | The 3 letter code of the BEX branch that will deliver your shipment.
+destinationBranchStr | String | The name of the QDS branch that will handle the delivery of your shipment.
+destinationHub | String | The 3 letter code of the QDS branch that will deliver your shipment.
 destinationLocationCode | String | The 3 letter town code of the location where your shipment will be delivered.
 estimatedTransitDays | Int | The number of business days we believe it will take to complete delivery of your shipment.
 scheduledTransitDays | Int | The number of business days we may take to complete the delivery of your shipment, based on the service level of the shipping service.

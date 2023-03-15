@@ -15,7 +15,7 @@ You are however able to submit a combination of waybill and reference numbers in
 
 You can submit a **GET** request as follows:
 
-`https://api.bex.co.za/api/waybillquicktrackingv3customtreeview?searchItems=ACP1055352,MDH42240,MA210214`
+`https://api.QDS.co.za/api/waybillquicktrackingv3customtreeview?searchItems=ACP1055352,MDH42240,MA210214`
 
 > Sample json message body
 
@@ -143,12 +143,12 @@ The _objects_ contained in the _items_ array are comprised as follows:
 Attribute | Type | Description
 --------- | ---- | -----------
 id | int | Our internal ID which has no relevance to you.
-dataTypeId | int | Internal to BEX and of no use to you.
+dataTypeId | int | Internal to QDS and of no use to you.
 groupingIndex | int | A tree hierarchy index used to identify parent objects from children.
 headerName | string | The name of the entity being returned, in this case “Tracking”.
 col1 | string | Column1, typically the DateTime the event occurred.
 col2 | string | Column2, typically the Waybill Number of the shipment.
 col3 | string | Column3, typically the Customer reference supplied for the shipment.
 col4 | string | Column4, typically the description of the Tracking event.
-col5 | string |Column5, the BEX member of staff who recorded the event.
+col5 | string |Column5, the QDS member of staff who recorded the event.
 internalRef | string | Our internal ID which has no relevance to you.

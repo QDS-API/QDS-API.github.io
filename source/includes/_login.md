@@ -4,7 +4,7 @@
 
 The *login* service serves as the starting point from which a valid session token will be generated. You call this endpoint to authenticate your _username_ and _password_ user credentials.
 
-The BEX platform will validate your request and if successful, generate and return in the response object a token contained in the `"value":` attribute.
+The QDS platform will validate your request and if successful, generate and return in the response object a token contained in the `"value":` attribute.
 
 This token is unique to your integration user identity and is to be kept private as it is the key needed to unlock access to the account security restricted API’s.
 
@@ -22,7 +22,7 @@ Service Relative URL: `api/service/login`
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>BEX API Login Example</title>
+<title>QDS API Login Example</title>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -32,7 +32,7 @@ Service Relative URL: `api/service/login`
     jQuery.support.cors = true; //this will enable cross domain access for all services
     //call the service using jQuery ajax and passing the parameters
     $.ajax({
-    url: 'https://api.bex.co.za/api/service/login?username=' + user + '&password=' + pass,
+    url: 'https://api.QDS.co.za/api/service/login?username=' + user + '&password=' + pass,
     type: 'POST',
     async: false, //dont run asynchronously
     success: function (data) {
@@ -65,7 +65,7 @@ The service supports URL parameters or JSON parameters in the message body
 
 Example Service Call using the URL Parameters
 
-URL: `http://insight.bex.co.za/api/service/login?username=user123&password=pass1234`
+URL: `http://insight.QDS.co.za/api/service/login?username=user123&password=pass1234`
 
 <aside class="notice">
     All URL-based field values must be URL encoded if special characters are used
@@ -93,7 +93,7 @@ The response body is structured as follows:
 
 Attribute | Type | Description
 --------- | ---- | -----------
-id | int | An internal BEX ID used to identify your user.
+id | int | An internal QDS ID used to identify your user.
 value | string | Your unique and private token.
 isStrongPassword | string | Confirms whether your password meets our complexity requirements.
 isEmailVerified	| string | Your email address is used to recover forgotten passwords or lost tokens and needs to be verified before transactions are possible.
@@ -108,7 +108,7 @@ allowApiLogin | string | A feature-flag used internally to grant additional logi
 
 ```javascript
 var settings = {
-  "url": "https://build.bex.co.za/api/service/submitwaybillwia",
+  "url": "https://build.QDS.co.za/api/service/submitwaybillwia",
   "method": "POST",
   "timeout": 0,
   "headers": {
